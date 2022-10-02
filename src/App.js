@@ -11,10 +11,8 @@ function App() {
       todo: todo,
     };
 
-    // add the todo to the list
     setList([...list, newTodo]);
 
-    // clear input box
     setInput("");
   };
 
@@ -27,16 +25,18 @@ function App() {
 
   const today = new Date();
   const date = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
+  const showTime = today.getHours() 
+  + ':' + today.getMinutes() 
+  + ":" + today.getSeconds();
 
-  const current = new TimeRanges();
-  const timeRanges = `${current.getHour()}`;
 
 
 
   return (
     <div className='App'>
-      <h1>Todays Agenda</h1>
-      <h2>Current date is {date}</h2>
+      <h1>Lets Go Shopping</h1>
+      <h2>{date}</h2>
+      <h3>{showTime}</h3>
       <input 
         type="text" 
         value={input} 
