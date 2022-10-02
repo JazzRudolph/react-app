@@ -2,12 +2,26 @@
   text-align: center;
 }
 .button {
-  background: none;
+  background: rgb(81, 229, 255);
   width: 30px;
+  border-radius: 5px;
+}
+
+.outLine {
+  height: 730px;
+  border: 10px solid rgb(242, 109, 249);
+  border-radius: 5px;
 }
 
 .listItem {
   text-decoration: none;
+}
+
+.img{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border: 10px solid rgb(242, 109, 249);
 }
 
 ::marker {

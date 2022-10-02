@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import MyImage from './ShoppingCart.png';
 
 function App() {
   const [list, setList] = useState([]);
@@ -31,12 +32,13 @@ function App() {
 
 
 
-
   return (
-    <div className='App'>
+    <div className='App outLine' >
+      <img src={MyImage}/>
       <h1>Lets Go Shopping</h1>
       <h2>{date}</h2>
       <h3>{showTime}</h3>
+      <br/>
       <input 
         type="text" 
         value={input} 
