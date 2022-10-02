@@ -25,9 +25,18 @@ function App() {
     setList(newList);
   };
 
+  const today = new Date();
+  const date = `${today.getMonth()+1}-${today.getDate()}-${today.getFullYear()}`;
+
+  const current = new TimeRanges();
+  const timeRanges = `${current.getHour()}`;
+
+
+
   return (
     <div className='App'>
       <h1>Todays Agenda</h1>
+      <h2>Current date is {date}</h2>
       <input 
         type="text" 
         value={input} 
@@ -35,10 +44,10 @@ function App() {
         />
         <button onClick={() => addTodo(input)}>Add to list</button>
         <ul>
-          {list.map((todo) => (
-            <li key={todo.id}>
+          {list.map((todo)  => (
+          <li key={todo.id}>
               {todo.todo}
-              <button onClick={() => deleteTodo(todo.id)}>&times;</button>
+              <button className="button" onClick={() => deleteTodo(todo.id)}>&times;</button>
             </li>
           ))}
         </ul>
