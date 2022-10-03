@@ -13,9 +13,14 @@
   border-radius: 5px;
 }
 
+.add{
+  background-color: rgb(81, 229, 255);  
+}
+
 .listItem {
   text-decoration: none;
 }
+
 
 .img{
   width: 100px;

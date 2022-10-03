@@ -44,7 +44,7 @@ function App() {
         value={input} 
         onChange={(e) => setInput(e.target.value)}
         />
-        <button onClick={() => addTodo(input)}>Add to list</button>
+        <button className='add' onClick={() => addTodo(input)}>Add to list</button>
         <ul>
           {list.map((todo)  => (
           <li key={todo.id}>
